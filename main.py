@@ -3,10 +3,11 @@ import requests
 
 def main():
     params = {
-        'text': 'NAME:Аналитик',  # Текст фильтра. В имени должно быть слово "Аналитик"
-        'area': 1,  # Поиск ощуществляется по вакансиям города Москва
-        'page': 2,  # Индекс страницы поиска на HH
-        'per_page': 100  # Кол-во вакансий на 1 странице
+        'text': 'NAME:Разработчик',
+        'area': 1,
+        'page': 2,
+        'per_page': 100,
+        'date_format': '2022-11-04',
     }
     url = 'https://api.hh.ru/vacancies'
     response = requests.get(url, params=params)
